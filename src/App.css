@@ -1,22 +1,28 @@
-.App {
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.container {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.csv-input {
+  padding: 10px;
+  display: block;
+  margin: 15px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container p {
+  padding-top: 10px;
+  color: #666;
 }
 
-.App-link {
-  color: #09d3ac;
+table{
+  overflow: auto;  
+
 }
