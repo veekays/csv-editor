@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import CSVReader from 'react-csv-reader'
 import Pagination from "react-js-pagination";
@@ -12,11 +13,18 @@ class Home extends Component {
             activePage: 1
         };
         this.headingData = []
+        this.fileData = []
+        this.itemsPerPage = 15
     }
 
     handlePageChange(pageNumber) {
-        console.log(`active page is ${pageNumber}`);
-        this.setState({ activePage: pageNumber });
+        let startingIndex = (pageNumber - 1) * this.itemsPerPage
+        let completeData = [...this.fileData]
+        this.setState({
+            activePage: pageNumber,
+            csvData: completeData.splice(startingIndex, this.itemsPerPage)
+        });
+
     }
 
     handleForce = data => {
@@ -26,8 +34,9 @@ class Home extends Component {
                 return a.concat(b);
             }, []);
         }
+        this.fileData = [...data]
         this.setState({
-            csvData: data
+            csvData: data.splice(0, this.itemsPerPage)
         })
     };
 
@@ -52,7 +61,7 @@ class Home extends Component {
     }
 
     handleDelete(index) {
-        let data = this.state.csvData
+        let data = this.fileData
         data.splice(index, 1)
         this.setState({
             csvData: data
@@ -107,18 +116,18 @@ class Home extends Component {
                             </tbody>
                         </table>
                     }
-                    {/* {
-                        this.headingData.length > 0 && */}
-                    <div className="pagination-container">
-                    <Pagination
-                        activePage={this.state.activePage}
-                        itemsCountPerPage={10}
-                        totalItemsCount={this.state.csvData.length}
-                        pageRangeDisplayed={5}
-                        onChange={this.handlePageChange.bind(this)}
-                  />
-                  </div>
-                  {/* } */}
+                    {
+                        this.fileData.length > 0 &&
+                        <div className="pagination-container">
+                            <Pagination
+                                activePage={this.state.activePage}
+                                itemsCountPerPage={this.itemsPerPage}
+                                totalItemsCount={this.fileData.length}
+                                pageRangeDisplayed={5}
+                                onChange={this.handlePageChange.bind(this)}
+                            />
+                        </div>
+                    }
                 </div>
             </div>
 

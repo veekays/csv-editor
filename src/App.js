@@ -3,7 +3,7 @@ import './App.css';
 import ContactUs from './components/contact-us'
 import Home from './components/home'
 import {
-  BrowserRouter as Router,
+  HashRouter,
   Switch,
   Route,
   Link
@@ -13,7 +13,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <HashRouter basename="/">
         <nav className="navbar navbar-expand navbar-light bg-dark border-bottom">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
@@ -32,7 +32,7 @@ class App extends Component {
             <ContactUs />
           </Route>
         </Switch>
-      </Router>
+      </HashRouter>
 
     );
   }
