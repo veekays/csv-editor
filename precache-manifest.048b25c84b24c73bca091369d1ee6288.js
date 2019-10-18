@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "174e8a5d4504beabdbf98bac5c8aef0a",
+    "revision": "b9baf98529418b9a477908a3c55c8ea6",
     "url": "/csv-editor/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/csv-editor/static/css/2.0624914a.chunk.css"
   },
   {
-    "revision": "a502b5a2e7b5c0d8f84e",
+    "revision": "e953906054e95733e382",
     "url": "/csv-editor/static/css/main.ff029e53.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/csv-editor/static/js/2.d89d6317.chunk.js"
   },
   {
-    "revision": "a502b5a2e7b5c0d8f84e",
-    "url": "/csv-editor/static/js/main.e2518fbf.chunk.js"
+    "revision": "e953906054e95733e382",
+    "url": "/csv-editor/static/js/main.85de456f.chunk.js"
   },
   {
     "revision": "50ef5b7db990d5b2d77f",
