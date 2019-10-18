@@ -71,7 +71,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <div className="container">
+                <div className="container pt-5">
                     <h1>Select CSV file</h1>
                     <CSVReader
                         cssClass="react-csv-input"

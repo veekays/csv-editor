@@ -13,7 +13,7 @@ class App extends Component {
 
   render() {
     return (
-      <HashRouter basename="/">
+      <HashRouter basename="/csv-editor">
         <nav className="navbar navbar-expand navbar-light bg-dark border-bottom">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">

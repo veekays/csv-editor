@@ -2,7 +2,7 @@
   "name": "matelab",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://veekays.github.io/csv-editor/",
+  "homepage": "https://veekays.github.io/csv-editor",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "react": "^16.10.2",
