@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import CSVReader from 'react-csv-reader'
-import {
-    Link
-} from "react-router-dom";
+import Pagination from "react-js-pagination";
 
 
 class Home extends Component {
@@ -10,9 +8,15 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            csvData: []
+            csvData: [],
+            activePage: 1
         };
         this.headingData = []
+    }
+
+    handlePageChange(pageNumber) {
+        console.log(`active page is ${pageNumber}`);
+        this.setState({ activePage: pageNumber });
     }
 
     handleForce = data => {
@@ -103,6 +107,18 @@ class Home extends Component {
                             </tbody>
                         </table>
                     }
+                    {/* {
+                        this.headingData.length > 0 && */}
+                    <div className="pagination-container">
+                    <Pagination
+                        activePage={this.state.activePage}
+                        itemsCountPerPage={10}
+                        totalItemsCount={this.state.csvData.length}
+                        pageRangeDisplayed={5}
+                        onChange={this.handlePageChange.bind(this)}
+                  />
+                  </div>
+                  {/* } */}
                 </div>
             </div>
 

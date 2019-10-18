@@ -95,3 +95,38 @@ form textarea {
 .contact-form-bg{
     height: calc(100vh - 57px);
 }
+
+.pagination-container {
+	text-align: center;
+	width: 100%;
+}
+
+.pagination {
+	display: inline-block;
+	padding: 0;
+	list-style: none;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.pagination li {
+	display: inline-block;
+}
+
+.pagination li a {
+	display: block;
+	width: 30px;
+	height: 30px;
+	color: #888;
+	text-decoration: none;
+	line-height: 30px;
+	font-size: 14px;
+	text-align: center;
+	margin: 0 10px;
+}
+
+.pagination li.active a {
+	background: #feba39;
+	border-radius: 50%;
+	color: #fff;
+}
